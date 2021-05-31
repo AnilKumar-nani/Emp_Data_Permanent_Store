@@ -1,4 +1,3 @@
-
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.io.*;
@@ -76,10 +75,8 @@ final class Programmer extends Employee
 	{
 		try 
 		{
-			File file = new File("C:/Users/anilp/Desktop/java/Employee/Data_Store.txt");
-			file.createNewFile();
-			PrintWriter writer = new PrintWriter(new FileOutputStream(file,true));
-
+			PrintWriter writer = new PrintWriter(new FileOutputStream("C:/Users/anilp/Desktop/java/Employee Data Store/Data_Store.txt",true));
+			System.out.println("Hello");
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		ArrayList<Employee> employee = new ArrayList<Employee>();
 		int outerMenuChoice = 0, innerMenuChoice = 0;
@@ -167,8 +164,7 @@ final class Programmer extends Employee
 			
 		}catch(Exception e)
 		{
-
+           System.out.println(e);
 		}
 	}
 }
-
